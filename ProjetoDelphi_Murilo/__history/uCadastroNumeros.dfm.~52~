@@ -1,0 +1,281 @@
+object frmCadastrosNumeros: TfrmCadastrosNumeros
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de numeros'
+  ClientHeight = 434
+  ClientWidth = 620
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 33
+    Height = 13
+    Caption = 'C'#243'digo'
+    FocusControl = DBEdit1
+  end
+  object Label2: TLabel
+    Left = 64
+    Top = 8
+    Width = 83
+    Height = 13
+    Caption = 'Data do cadastro'
+    FocusControl = DBEdit2
+  end
+  object Label4: TLabel
+    Left = 200
+    Top = 59
+    Width = 86
+    Height = 13
+    Caption = 'Numero do celular'
+    FocusControl = DBEdit4
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 115
+    Width = 87
+    Height = 13
+    Caption = 'Dia do pagamento'
+    FocusControl = DBEdit5
+  end
+  object Label6: TLabel
+    Left = 160
+    Top = 115
+    Width = 60
+    Height = 13
+    Caption = 'Valor mensal'
+    FocusControl = DBEdit6
+  end
+  object Label7: TLabel
+    Left = 474
+    Top = 391
+    Width = 89
+    Height = 13
+    Caption = 'Total  mensalidade'
+    FocusControl = edtCredito
+  end
+  object Label8: TLabel
+    Left = 8
+    Top = 59
+    Width = 76
+    Height = 13
+    Caption = 'Nome do cliente'
+  end
+  object btnGravar: TButton
+    Left = 96
+    Top = 190
+    Width = 75
+    Height = 25
+    Caption = 'Gravar'
+    Default = True
+    TabOrder = 0
+    OnClick = btnGravarClick
+  end
+  object btnExcluir: TButton
+    Left = 264
+    Top = 347
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 1
+    OnClick = btnExcluirClick
+  end
+  object btnAnterior_dado: TButton
+    Left = 183
+    Top = 347
+    Width = 75
+    Height = 25
+    Caption = '<'
+    TabOrder = 2
+    OnClick = btnAnterior_dadoClick
+  end
+  object btnProximo_dado: TButton
+    Left = 345
+    Top = 347
+    Width = 75
+    Height = 25
+    Caption = '>'
+    TabOrder = 3
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 355
+    Top = 165
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 4
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 221
+    Width = 606
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'data_cadastro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'id_cliente'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'numero_celular'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'dia_pagamento'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'valor_mensal'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'credito'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'nome_cliente'
+        Title.Caption = 'Nome do cliente'
+        Width = 325
+        Visible = True
+      end>
+  end
+  object edtQuantidadeCadastro: TLabeledEdit
+    Left = 8
+    Top = 366
+    Width = 121
+    Height = 21
+    EditLabel.Width = 123
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Quantidade de Cadastros'
+    ReadOnly = True
+    TabOrder = 6
+  end
+  object DBEdit1: TDBEdit
+    Left = 8
+    Top = 24
+    Width = 33
+    Height = 21
+    DataField = 'id'
+    DataSource = DataSource1
+    TabOrder = 7
+  end
+  object DBEdit2: TDBEdit
+    Left = 64
+    Top = 24
+    Width = 134
+    Height = 21
+    DataField = 'data_cadastro'
+    DataSource = DataSource1
+    TabOrder = 8
+  end
+  object DBEdit4: TDBEdit
+    Left = 200
+    Top = 75
+    Width = 147
+    Height = 21
+    DataField = 'numero_celular'
+    DataSource = DataSource1
+    TabOrder = 9
+  end
+  object DBEdit5: TDBEdit
+    Left = 8
+    Top = 131
+    Width = 134
+    Height = 21
+    DataField = 'dia_pagamento'
+    DataSource = DataSource1
+    TabOrder = 10
+  end
+  object DBEdit6: TDBEdit
+    Left = 160
+    Top = 131
+    Width = 134
+    Height = 21
+    DataField = 'valor_mensal'
+    DataSource = DataSource1
+    TabOrder = 11
+  end
+  object edtCredito: TDBEdit
+    Left = 474
+    Top = 407
+    Width = 113
+    Height = 21
+    DataField = 'credito'
+    DataSource = DataSource1
+    Enabled = False
+    ReadOnly = True
+    TabOrder = 12
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 8
+    Top = 75
+    Width = 177
+    Height = 21
+    DataField = 'nome_cliente'
+    DataSource = DataSource1
+    TabOrder = 13
+  end
+  object edtValorMedio: TLabeledEdit
+    Left = 474
+    Top = 366
+    Width = 121
+    Height = 21
+    EditLabel.Width = 132
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Valor m'#233'dio da mensalidade'
+    ReadOnly = True
+    TabOrder = 14
+  end
+  object btnNovo: TButton
+    Left = 8
+    Top = 190
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 15
+    OnClick = btnNovoClick
+  end
+  object btnCancelar: TButton
+    Left = 186
+    Top = 190
+    Width = 75
+    Height = 25
+    Caption = 'Cancelar'
+    TabOrder = 16
+    OnClick = btnCancelarClick
+  end
+  object DataSource1: TDataSource
+    DataSet = DataModule2.FDTable_numeros
+    Left = 576
+  end
+end

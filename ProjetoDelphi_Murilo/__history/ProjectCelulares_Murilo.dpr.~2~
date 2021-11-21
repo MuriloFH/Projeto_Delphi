@@ -1,0 +1,16 @@
+program ProjectCelulares_Murilo;
+
+uses
+  Vcl.Forms,
+  uTelaPrincipal in 'uTelaPrincipal.pas' {frmPrincipal},
+  uBancoDados in 'uBancoDados.pas' {DataModule2: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TDataModule2, DataModule2);
+  Application.Run;
+end.

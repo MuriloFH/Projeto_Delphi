@@ -1,0 +1,100 @@
+unit uBancoDados;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.SQLite,
+  FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
+  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, System.Notification, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TDataModule2 = class(TDataModule)
+    FDConnection_SQLite_Banco: TFDConnection;
+    FDQuery_cidades: TFDQuery;
+    FDQuery_clientes: TFDQuery;
+    FDQuery_Numeros: TFDQuery;
+    FDTable_cidades: TFDTable;
+    FDTable_cidadesID: TIntegerField;
+    FDTable_cidadesNOME_CIDADE: TStringField;
+    FDTable_cidadesSIGLA_ESTADO: TStringField;
+    FDTable_numeros: TFDTable;
+    FDTable_clientes: TFDTable;
+    FDTable_clientesid: TIntegerField;
+    FDTable_clientesnome: TStringField;
+    FDTable_clientesendereco: TStringField;
+    FDTable_clientesid_cidade: TWideStringField;
+    FDTable_clientesnome_cidade: TStringField;
+    FDTable_numerosid: TIntegerField;
+    FDTable_numerosdata_cadastro: TStringField;
+    FDTable_numerosid_cliente: TIntegerField;
+    FDTable_numerosnumero_celular: TIntegerField;
+    FDTable_numerosdia_pagamento: TStringField;
+    FDTable_numerosvalor_mensal: TIntegerField;
+    FDTable_numeroscredito: TFMTBCDField;
+    FDTable_numerosnome_cliente: TStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+
+    function CalculaTotal:Double;
+    function CalculaQuantidade:Integer;
+  end;
+
+var
+  DataModule2: TDataModule2;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+{ TDataModule2 }
+
+//Calculando a quantidade de cadastros, da pra usar para saber a média
+function TDataModule2.CalculaQuantidade: Integer;
+var
+  cont:Integer;
+
+begin
+
+  cont:=0;
+  FDTable_numeros.First;
+
+  while not FDTable_numeros.Eof do
+    begin
+      cont:=cont+1;
+      FDTable_numeros.Next;
+    end;
+
+  Result:=cont;
+
+end;
+
+
+//alterar e criar um campo no form de total de credito ou total do pagamentos mensais
+function TDataModule2.CalculaTotal: Double;
+var
+  soma:Double;
+
+begin
+
+  soma:=0;
+  FDTable_numeros.First;
+
+  while not FDTable_numeros.Eof do
+    begin
+      //soma:=soma+FDTable_numeroscredito.Value;
+      FDTable_numeros.Next;
+    end;
+
+  Result:=soma;
+
+end;
+
+end.

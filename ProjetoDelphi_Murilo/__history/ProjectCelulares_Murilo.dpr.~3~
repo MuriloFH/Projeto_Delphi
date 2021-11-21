@@ -1,0 +1,20 @@
+program ProjectCelulares_Murilo;
+
+uses
+  Vcl.Forms,
+  uTelaPrincipal in 'uTelaPrincipal.pas' {frmPrincipal},
+  uBancoDados in 'uBancoDados.pas' {DataModule2: TDataModule},
+  uCadastroNumeros in 'uCadastroNumeros.pas' {Cadastros},
+  uCadastroClientes in 'uCadastroClientes.pas' {frmCadastroCliente};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TDataModule2, DataModule2);
+  Application.CreateForm(TCadastros, Cadastros);
+  Application.CreateForm(TfrmCadastroCliente, frmCadastroCliente);
+  Application.Run;
+end.
