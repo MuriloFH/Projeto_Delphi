@@ -47,6 +47,13 @@ object frmCadastroCliente: TfrmCadastroCliente
     Height = 13
     Caption = 'Cidade'
   end
+  object Label4: TLabel
+    Left = 8
+    Top = 399
+    Width = 76
+    Height = 13
+    Caption = #169' 2021, SI, Inc'
+  end
   object btnGravar: TButton
     Left = 132
     Top = 156

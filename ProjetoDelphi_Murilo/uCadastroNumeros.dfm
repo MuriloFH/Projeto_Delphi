@@ -71,6 +71,13 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     Height = 13
     Caption = 'Nome do cliente'
   end
+  object Label3: TLabel
+    Left = 8
+    Top = 423
+    Width = 76
+    Height = 13
+    Caption = #169' 2021, SI, Inc'
+  end
   object btnGravar: TButton
     Left = 96
     Top = 190

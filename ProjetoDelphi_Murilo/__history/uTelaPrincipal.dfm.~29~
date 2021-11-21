@@ -1,0 +1,115 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Bem vindo!'
+  ClientHeight = 415
+  ClientWidth = 784
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  DesignSize = (
+    784
+    415)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 56
+    Top = 26
+    Width = 630
+    Height = 30
+    Anchors = [akLeft, akRight]
+    Caption = 'Bem vindo ao gerenciador de celulares'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Fixedsys'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 208
+    Top = 97
+    Width = 333
+    Height = 26
+    Anchors = [akLeft, akRight]
+    Caption = 'Escolha abaixo o que deseja fazer'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Franklin Gothic Medium'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object btnCadastroCidades: TButton
+    Left = 520
+    Top = 143
+    Width = 247
+    Height = 162
+    Anchors = [akLeft, akRight]
+    Caption = 'Cadastro de cidades'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = btnCadastroCidadesClick
+  end
+  object btnCadastroCliente: TButton
+    Left = 264
+    Top = 143
+    Width = 247
+    Height = 162
+    Anchors = [akLeft, akRight]
+    Caption = 'Cadastro de clientes'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = btnCadastroClienteClick
+  end
+  object btnCadastroNumeros: TButton
+    Left = 5
+    Top = 143
+    Width = 247
+    Height = 162
+    Anchors = [akLeft, akRight]
+    Caption = 'Cadastro de numeros'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = btnCadastroNumerosClick
+  end
+  object MainMenu1: TMainMenu
+    Left = 224
+    Top = 336
+    object AlterarCor1: TMenuItem
+      Caption = 'Op'#231#245'es'
+      object AlterarCor2: TMenuItem
+        Caption = 'Alterar Cor'
+        object Whitemode1: TMenuItem
+          Caption = 'White mode'
+          OnClick = Whitemode1Click
+        end
+        object Whitemode2: TMenuItem
+          Caption = 'Dark mode'
+        end
+      end
+    end
+  end
+end

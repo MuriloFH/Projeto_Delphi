@@ -38,6 +38,13 @@ object frmCadastroCidades: TfrmCadastroCidades
     Height = 13
     Caption = 'Estado'
   end
+  object Label4: TLabel
+    Left = 8
+    Top = 326
+    Width = 76
+    Height = 13
+    Caption = #169' 2021, SI, Inc'
+  end
   object DBEdit1: TDBEdit
     Left = 16
     Top = 32
@@ -183,7 +190,7 @@ object frmCadastroCidades: TfrmCadastroCidades
   end
   object DataSource_Cidades: TDataSource
     DataSet = DataModule2.FDTable_cidades
-    Left = 88
+    Left = 392
     Top = 16
   end
 end

@@ -26,6 +26,7 @@ type
     edtQuantidadeCliente: TLabeledEdit;
     btnNovo: TButton;
     btnCancelar: TBitBtn;
+    Label4: TLabel;
     procedure FormShow(Sender: TObject);
     //procedure DataSource1DataChange(Sender: TObject; Field: TField);
     procedure DataSource_ClientesStateChange(Sender: TObject);

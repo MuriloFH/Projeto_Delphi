@@ -7,7 +7,8 @@ uses
   uCadastroNumeros in 'uCadastroNumeros.pas' {frmCadastrosNumeros},
   uCadastroClientes in 'uCadastroClientes.pas' {frmCadastroCliente},
   uCadastroCidades in 'uCadastroCidades.pas' {frmCadastroCidades},
-  uSplash in 'uSplash.pas' {frmSplash};
+  uSplash in 'uSplash.pas' {frmSplash},
+  uLayout in 'uLayout.pas' {Form1};
 
 {$R *.res}
 
@@ -20,5 +21,6 @@ begin
   Application.CreateForm(TfrmCadastrosNumeros, frmCadastrosNumeros);
   Application.CreateForm(TfrmCadastroCliente, frmCadastroCliente);
   Application.CreateForm(TfrmCadastroCidades, frmCadastroCidades);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

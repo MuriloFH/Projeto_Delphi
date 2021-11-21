@@ -10,20 +10,23 @@
     <Transaction>2021/11/13 16:15:09.000.979,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\ProjectCelulares_Murilo.dproj=C:\Users\muris\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2021/11/13 16:35:26.000.197,=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
     <Transaction>2021/11/13 16:36:29.000.575,=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit2.pas</Transaction>
-    <Transaction>2021/11/13 16:38:46.000.558,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uCadastroNumeros.dfm</Transaction>
     <Transaction>2021/11/13 16:38:46.000.558,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uCadastroNumeros.pas</Transaction>
+    <Transaction>2021/11/13 16:38:46.000.558,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uCadastroNumeros.dfm</Transaction>
     <Transaction>2021/11/13 16:38:55.000.652,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit2.pas=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uCadastroClientes.pas</Transaction>
     <Transaction>2021/11/13 16:38:55.000.652,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit2.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uCadastroClientes.dfm</Transaction>
     <Transaction>2021/11/13 16:40:33.000.100,=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
-    <Transaction>2021/11/13 16:40:59.000.360,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uCadastroCidades.dfm</Transaction>
     <Transaction>2021/11/13 16:40:59.000.360,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uCadastroCidades.pas</Transaction>
+    <Transaction>2021/11/13 16:40:59.000.360,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uCadastroCidades.dfm</Transaction>
     <Transaction>2021/11/21 14:56:44.000.957,=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
     <Transaction>2021/11/21 14:58:02.000.792,=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
-    <Transaction>2021/11/21 15:01:31.000.799,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uSplash.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.dfm</Transaction>
     <Transaction>2021/11/21 15:01:31.000.799,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uSplash.pas=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
+    <Transaction>2021/11/21 15:01:31.000.799,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uSplash.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.dfm</Transaction>
     <Transaction>2021/11/21 15:59:07.000.600,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uSplash.pas=</Transaction>
     <Transaction>2021/11/21 16:05:29.142,=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
-    <Transaction>2021/11/21 16:08:25.012,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uSplash.pas=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
     <Transaction>2021/11/21 16:08:25.012,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uSplash.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.dfm</Transaction>
+    <Transaction>2021/11/21 16:08:25.012,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uSplash.pas=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
+    <Transaction>2021/11/21 16:41:38.882,=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
+    <Transaction>2021/11/21 16:41:47.135,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uLayout.dfm=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.dfm</Transaction>
+    <Transaction>2021/11/21 16:41:47.135,C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\uLayout.pas=C:\Users\muris\Documents\Embarcadero\Studio\Projects\ProjetoDelphi_Murilo\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -33,6 +33,7 @@ type
     edtValorMedio: TLabeledEdit;
     btnNovo: TButton;
     btnCancelar: TButton;
+    Label3: TLabel;
     procedure FormShow(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);

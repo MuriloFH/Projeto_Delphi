@@ -23,6 +23,7 @@ type
     DBComboBox1: TDBComboBox;
     btnNovo: TButton;
     btnCancelar: TButton;
+    Label4: TLabel;
     procedure btnNovoClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);

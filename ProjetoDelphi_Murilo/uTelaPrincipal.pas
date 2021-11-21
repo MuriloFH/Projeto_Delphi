@@ -4,16 +4,17 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Menus;
 
 type
   TfrmPrincipal = class(TForm)
-    Panel1: TPanel;
     Label1: TLabel;
     Label2: TLabel;
     btnCadastroCidades: TButton;
     btnCadastroNumeros: TButton;
     btnCadastroCliente: TButton;
+    Label3: TLabel;
     procedure btnCadastroNumerosClick(Sender: TObject);
     procedure btnCadastroClienteClick(Sender: TObject);
     procedure btnCadastroCidadesClick(Sender: TObject);
@@ -31,7 +32,7 @@ implementation
 {$R *.dfm}
 
 uses uBancoDados, uCadastroCidades, uCadastroClientes, uCadastroNumeros,
-  uSplash;
+  uSplash, uLayout;
 
 procedure TfrmPrincipal.btnCadastroCidadesClick(Sender: TObject);
 begin
