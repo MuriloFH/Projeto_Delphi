@@ -1,9 +1,10 @@
 object frmCadastroCidades: TfrmCadastroCidades
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'Cadastro de cidades'
-  ClientHeight = 337
-  ClientWidth = 428
+  ClientHeight = 347
+  ClientWidth = 438
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +12,7 @@ object frmCadastroCidades: TfrmCadastroCidades
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -42,7 +44,7 @@ object frmCadastroCidades: TfrmCadastroCidades
     Width = 28
     Height = 21
     DataField = 'ID'
-    DataSource = DataSource1
+    DataSource = DataSource_Cidades
     TabOrder = 0
   end
   object DBEdit2: TDBEdit
@@ -51,7 +53,7 @@ object frmCadastroCidades: TfrmCadastroCidades
     Width = 250
     Height = 21
     DataField = 'NOME_CIDADE'
-    DataSource = DataSource1
+    DataSource = DataSource_Cidades
     TabOrder = 1
   end
   object btnGravar: TButton
@@ -96,7 +98,8 @@ object frmCadastroCidades: TfrmCadastroCidades
     Top = 155
     Width = 409
     Height = 134
-    DataSource = DataSource1
+    DataSource = DataSource_Cidades
+    Enabled = False
     TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -123,21 +126,13 @@ object frmCadastroCidades: TfrmCadastroCidades
         Visible = True
       end>
   end
-  object DBNavigator1: TDBNavigator
-    Left = 163
-    Top = 24
-    Width = 240
-    Height = 25
-    DataSource = DataSource1
-    TabOrder = 7
-  end
   object DBComboBox1: TDBComboBox
     Left = 288
     Top = 72
     Width = 42
     Height = 21
     DataField = 'SIGLA_ESTADO'
-    DataSource = DataSource1
+    DataSource = DataSource_Cidades
     Items.Strings = (
       'AC'
       'AL'
@@ -166,7 +161,7 @@ object frmCadastroCidades: TfrmCadastroCidades
       'SE'
       'TO'
       'DF')
-    TabOrder = 8
+    TabOrder = 7
   end
   object btnNovo: TButton
     Left = 8
@@ -174,7 +169,7 @@ object frmCadastroCidades: TfrmCadastroCidades
     Width = 75
     Height = 25
     Caption = 'Novo'
-    TabOrder = 9
+    TabOrder = 8
     OnClick = btnNovoClick
   end
   object btnCancelar: TButton
@@ -183,10 +178,10 @@ object frmCadastroCidades: TfrmCadastroCidades
     Width = 75
     Height = 25
     Caption = 'Cancelar'
-    TabOrder = 10
+    TabOrder = 9
     OnClick = btnCancelarClick
   end
-  object DataSource1: TDataSource
+  object DataSource_Cidades: TDataSource
     DataSet = DataModule2.FDTable_cidades
     Left = 88
     Top = 16

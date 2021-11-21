@@ -1,9 +1,10 @@
 object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'Bem vindo!'
-  ClientHeight = 405
-  ClientWidth = 774
+  ClientHeight = 415
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,23 +12,26 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 774
-    Height = 405
+    Width = 784
+    Height = 415
     Align = alClient
     Anchors = [akLeft, akRight]
     TabOrder = 0
+    ExplicitWidth = 774
+    ExplicitHeight = 405
     DesignSize = (
-      774
-      405)
+      784
+      415)
     object Label1: TLabel
       Left = 56
-      Top = 25
-      Width = 630
+      Top = 26
+      Width = 640
       Height = 30
       Anchors = [akLeft, akRight]
       Caption = 'Bem vindo ao gerenciador de celulares'
@@ -37,11 +41,13 @@ object frmPrincipal: TfrmPrincipal
       Font.Name = 'Fixedsys'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitTop = 25
+      ExplicitWidth = 630
     end
     object Label2: TLabel
       Left = 208
-      Top = 94
-      Width = 333
+      Top = 97
+      Width = 343
       Height = 26
       Anchors = [akLeft, akRight]
       Caption = 'Escolha abaixo o que deseja fazer'
@@ -51,11 +57,13 @@ object frmPrincipal: TfrmPrincipal
       Font.Name = 'Franklin Gothic Medium'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitTop = 94
+      ExplicitWidth = 333
     end
     object btnCadastroCidades: TButton
       Left = 520
-      Top = 138
-      Width = 237
+      Top = 143
+      Width = 247
       Height = 162
       Anchors = [akLeft, akRight]
       Caption = 'Cadastro de cidades'
@@ -67,11 +75,13 @@ object frmPrincipal: TfrmPrincipal
       ParentFont = False
       TabOrder = 0
       OnClick = btnCadastroCidadesClick
+      ExplicitTop = 138
+      ExplicitWidth = 237
     end
     object btnCadastroNumeros: TButton
       Left = 5
-      Top = 138
-      Width = 237
+      Top = 143
+      Width = 247
       Height = 162
       Anchors = [akLeft, akRight]
       Caption = 'Cadastro de numeros'
@@ -83,11 +93,13 @@ object frmPrincipal: TfrmPrincipal
       ParentFont = False
       TabOrder = 1
       OnClick = btnCadastroNumerosClick
+      ExplicitTop = 138
+      ExplicitWidth = 237
     end
     object btnCadastroCliente: TButton
       Left = 264
-      Top = 138
-      Width = 237
+      Top = 143
+      Width = 247
       Height = 162
       Anchors = [akLeft, akRight]
       Caption = 'Cadastro de clientes'
@@ -99,6 +111,8 @@ object frmPrincipal: TfrmPrincipal
       ParentFont = False
       TabOrder = 2
       OnClick = btnCadastroClienteClick
+      ExplicitTop = 138
+      ExplicitWidth = 237
     end
   end
 end

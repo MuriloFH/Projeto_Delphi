@@ -14,7 +14,7 @@ type
     btnAnterior_dado: TButton;
     DBGrid1: TDBGrid;
     btnExcluir: TButton;
-    DataSource1: TDataSource;
+    DataSource_Clientes: TDataSource;
     Label1: TLabel;
     DBEdit1: TDBEdit;
     Label2: TLabel;
@@ -22,14 +22,13 @@ type
     Label3: TLabel;
     DBEdit3: TDBEdit;
     Label6: TLabel;
-    DBNavigator1: TDBNavigator;
     DBLookupComboBox1: TDBLookupComboBox;
     edtQuantidadeCliente: TLabeledEdit;
     btnNovo: TButton;
     btnCancelar: TBitBtn;
     procedure FormShow(Sender: TObject);
     //procedure DataSource1DataChange(Sender: TObject; Field: TField);
-    procedure DataSource1StateChange(Sender: TObject);
+    procedure DataSource_ClientesStateChange(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
@@ -56,12 +55,12 @@ uses uBancoDados, uCadastroCidades;
 //buttons
 procedure TfrmCadastroCliente.btnAnterior_dadoClick(Sender: TObject);
 begin
-  DataModule2.FDTable_clientes.Prior;
+  DataSource_Clientes.DataSet.Prior;
 end;
 
 procedure TfrmCadastroCliente.btnCancelarClick(Sender: TObject);
 begin
-   DataSource1.DataSet.Cancel;
+   DataSource_Clientes.DataSet.Cancel;
 end;
 
 procedure TfrmCadastroCliente.btnExcluirClick(Sender: TObject);
@@ -69,32 +68,33 @@ begin
 if (Application.MessageBox('Deseja excluir?','Aviso',MB_ICONQUESTION+MB_YESNO)= idNo) then
     Exit;
 
-  DataSource1. DataSet.Delete;
+  DataSource_Clientes. DataSet.Delete;
+  QuantidadeCliente;
 end;
 
 procedure TfrmCadastroCliente.btnGravarClick(Sender: TObject);
 begin
-  DataSource1.DataSet.Post;
+  DataSource_Clientes.DataSet.Post;
 end;
 
 procedure TfrmCadastroCliente.btnNovoClick(Sender: TObject);
 begin
-  DataSource1.DataSet.Append;
+  DataSource_Clientes.DataSet.Append;
   DBEdit1.SetFocus;
 end;
 procedure TfrmCadastroCliente.btnProximo_dadoClick(Sender: TObject);
 begin
   //não está funcionando o botão next
-  DataModule2.FDQuery_clientes.Next;
+  DataSource_Clientes.DataSet.Next;
 end;
 
 //buttons
 
 
 //atualiza a quantidade
-procedure TfrmCadastroCliente.DataSource1StateChange(Sender: TObject);
+procedure TfrmCadastroCliente.DataSource_ClientesStateChange(Sender: TObject);
 begin
-if DataSource1.State in [dsBrowse] then
+if DataSource_Clientes.State in [dsBrowse] then
     QuantidadeCliente;
 
 end;

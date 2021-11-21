@@ -1,9 +1,10 @@
 object frmCadastrosNumeros: TfrmCadastrosNumeros
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'Cadastro de numeros'
-  ClientHeight = 434
-  ClientWidth = 620
+  ClientHeight = 444
+  ClientWidth = 630
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +12,7 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -47,7 +49,7 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     FocusControl = DBEdit5
   end
   object Label6: TLabel
-    Left = 160
+    Left = 127
     Top = 115
     Width = 60
     Height = 13
@@ -106,21 +108,14 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     TabOrder = 3
     OnClick = btnProximo_dadoClick
   end
-  object DBNavigator1: TDBNavigator
-    Left = 355
-    Top = 165
-    Width = 240
-    Height = 25
-    DataSource = DataSource1
-    TabOrder = 4
-  end
   object DBGrid1: TDBGrid
     Left = 8
     Top = 221
     Width = 606
     Height = 120
-    DataSource = DataSource1
-    TabOrder = 5
+    DataSource = DataSource_Numeros
+    Enabled = False
+    TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -179,7 +174,7 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     EditLabel.Height = 13
     EditLabel.Caption = 'Quantidade de Cadastros'
     ReadOnly = True
-    TabOrder = 6
+    TabOrder = 5
   end
   object DBEdit1: TDBEdit
     Left = 8
@@ -187,17 +182,18 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     Width = 33
     Height = 21
     DataField = 'id'
-    DataSource = DataSource1
-    TabOrder = 7
+    DataSource = DataSource_Numeros
+    TabOrder = 6
   end
   object DBEdit2: TDBEdit
     Left = 64
     Top = 24
-    Width = 134
+    Width = 57
     Height = 21
     DataField = 'data_cadastro'
-    DataSource = DataSource1
-    TabOrder = 8
+    DataSource = DataSource_Numeros
+    MaxLength = 8
+    TabOrder = 7
   end
   object DBEdit4: TDBEdit
     Left = 200
@@ -205,26 +201,28 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     Width = 147
     Height = 21
     DataField = 'numero_celular'
-    DataSource = DataSource1
-    TabOrder = 9
+    DataSource = DataSource_Numeros
+    MaxLength = 14
+    TabOrder = 8
   end
   object DBEdit5: TDBEdit
     Left = 8
     Top = 131
-    Width = 134
+    Width = 57
     Height = 21
     DataField = 'dia_pagamento'
-    DataSource = DataSource1
-    TabOrder = 10
+    DataSource = DataSource_Numeros
+    MaxLength = 8
+    TabOrder = 9
   end
   object DBEdit6: TDBEdit
-    Left = 160
+    Left = 127
     Top = 131
     Width = 134
     Height = 21
     DataField = 'valor_mensal'
-    DataSource = DataSource1
-    TabOrder = 11
+    DataSource = DataSource_Numeros
+    TabOrder = 10
   end
   object edtCredito: TDBEdit
     Left = 474
@@ -232,10 +230,10 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     Width = 113
     Height = 21
     DataField = 'credito'
-    DataSource = DataSource1
+    DataSource = DataSource_Numeros
     Enabled = False
     ReadOnly = True
-    TabOrder = 12
+    TabOrder = 11
   end
   object DBLookupComboBox1: TDBLookupComboBox
     Left = 8
@@ -243,8 +241,8 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     Width = 177
     Height = 21
     DataField = 'nome_cliente'
-    DataSource = DataSource1
-    TabOrder = 13
+    DataSource = DataSource_Numeros
+    TabOrder = 12
   end
   object edtValorMedio: TLabeledEdit
     Left = 474
@@ -255,7 +253,7 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     EditLabel.Height = 13
     EditLabel.Caption = 'Valor m'#233'dio da mensalidade'
     ReadOnly = True
-    TabOrder = 14
+    TabOrder = 13
   end
   object btnNovo: TButton
     Left = 8
@@ -263,7 +261,7 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     Width = 75
     Height = 25
     Caption = 'Novo'
-    TabOrder = 15
+    TabOrder = 14
     OnClick = btnNovoClick
   end
   object btnCancelar: TButton
@@ -272,11 +270,13 @@ object frmCadastrosNumeros: TfrmCadastrosNumeros
     Width = 75
     Height = 25
     Caption = 'Cancelar'
-    TabOrder = 16
+    TabOrder = 15
     OnClick = btnCancelarClick
   end
-  object DataSource1: TDataSource
+  object DataSource_Numeros: TDataSource
     DataSet = DataModule2.FDTable_numeros
-    Left = 576
+    OnStateChange = DataSource_NumerosStateChange
+    Left = 544
+    Top = 8
   end
 end

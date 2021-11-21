@@ -1,0 +1,45 @@
+unit uSplash;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.jpeg;
+
+type
+  TfrmSplash = class(TForm)
+    Image1: TImage;
+    Timer1: TTimer;
+    ProgressBar1: TProgressBar;
+    procedure Timer1Timer(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmSplash: TfrmSplash;
+
+implementation
+
+{$R *.dfm}
+
+uses uTelaPrincipal;
+
+procedure TfrmSplash.Timer1Timer(Sender: TObject);
+
+begin
+  ProgressBar1.Position:= ProgressBar1.Position+10;
+
+  if (ProgressBar1.Position = 100) then
+    begin
+      Timer1.Enabled := false;
+      frmSplash.Destroy;
+      frmPrincipal.Show;
+    end;
+
+end;
+
+end.

@@ -11,7 +11,7 @@ type
   TfrmCadastroCidades = class(TForm)
     Label1: TLabel;
     DBEdit1: TDBEdit;
-    DataSource1: TDataSource;
+    DataSource_Cidades: TDataSource;
     Label2: TLabel;
     DBEdit2: TDBEdit;
     Label3: TLabel;
@@ -20,7 +20,6 @@ type
     btnAnterior_dado: TButton;
     btnProximo_dado: TButton;
     DBGrid1: TDBGrid;
-    DBNavigator1: TDBNavigator;
     DBComboBox1: TDBComboBox;
     btnNovo: TButton;
     btnCancelar: TButton;
@@ -48,12 +47,12 @@ uses uBancoDados;
 //buttons
 procedure TfrmCadastroCidades.btnAnterior_dadoClick(Sender: TObject);
 begin
-  DataModule2.FDTable_cidades.Prior;
+  DataSource_Cidades.DataSet.Prior;
 end;
 
 procedure TfrmCadastroCidades.btnCancelarClick(Sender: TObject);
 begin
-  DataSource1. DataSet.Cancel;
+  DataSource_Cidades.DataSet.Cancel;
 end;
 
 procedure TfrmCadastroCidades.btnExcluirClick(Sender: TObject);
@@ -61,22 +60,22 @@ begin
   if (Application.MessageBox('Deseja excluir?','Aviso',MB_ICONQUESTION+MB_YESNO)= idNo) then
     Exit;
 
-  DataSource1. DataSet.Delete;
+  DataSource_Cidades.DataSet.Delete;
 end;
 
 procedure TfrmCadastroCidades.btnGravarClick(Sender: TObject);
 begin
-  DataSource1. DataSet.Post;
+  DataSource_Cidades.DataSet.Post;
 end;
 
 procedure TfrmCadastroCidades.btnNovoClick(Sender: TObject);
 begin
-  DataSource1.DataSet.Append;
+  DataSource_Cidades.DataSet.Append;
   DBEdit1.SetFocus;
 end;
 procedure TfrmCadastroCidades.btnProximo_dadoClick(Sender: TObject);
 begin
-  DataModule2.FDTable_cidades.Next;
+  DataSource_Cidades.DataSet.Next;
 end;
 
 //buttons

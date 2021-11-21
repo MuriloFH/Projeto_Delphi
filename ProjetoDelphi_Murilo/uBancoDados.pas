@@ -36,6 +36,7 @@ type
     FDTable_numerosvalor_mensal: TIntegerField;
     FDTable_numeroscredito: TFMTBCDField;
     FDTable_numerosnome_cliente: TStringField;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -112,6 +113,11 @@ begin
 
 end;
 
+
+procedure TDataModule2.DataModuleCreate(Sender: TObject);
+begin
+
+end;
 
 //Calcula a quantidade de clientes
 function TDataModule2.QuantidadeClientes: Integer;

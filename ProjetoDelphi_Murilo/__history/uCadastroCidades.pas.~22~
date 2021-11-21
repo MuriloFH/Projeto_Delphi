@@ -1,0 +1,83 @@
+unit uCadastroCidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Mask,
+  Vcl.DBCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
+
+type
+  TfrmCadastroCidades = class(TForm)
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource_Cidades: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    btnGravar: TButton;
+    btnExcluir: TButton;
+    btnAnterior_dado: TButton;
+    btnProximo_dado: TButton;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    DBComboBox1: TDBComboBox;
+    btnNovo: TButton;
+    btnCancelar: TButton;
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+    procedure btnProximo_dadoClick(Sender: TObject);
+    procedure btnAnterior_dadoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroCidades: TfrmCadastroCidades;
+
+implementation
+
+{$R *.dfm}
+
+uses uBancoDados;
+
+//buttons
+procedure TfrmCadastroCidades.btnAnterior_dadoClick(Sender: TObject);
+begin
+  DataModule2.FDTable_cidades.Prior;
+end;
+
+procedure TfrmCadastroCidades.btnCancelarClick(Sender: TObject);
+begin
+  DataSource1. DataSet.Cancel;
+end;
+
+procedure TfrmCadastroCidades.btnExcluirClick(Sender: TObject);
+begin
+  if (Application.MessageBox('Deseja excluir?','Aviso',MB_ICONQUESTION+MB_YESNO)= idNo) then
+    Exit;
+
+  DataSource1. DataSet.Delete;
+end;
+
+procedure TfrmCadastroCidades.btnGravarClick(Sender: TObject);
+begin
+  DataSource1. DataSet.Post;
+end;
+
+procedure TfrmCadastroCidades.btnNovoClick(Sender: TObject);
+begin
+  DataSource1.DataSet.Append;
+  DBEdit1.SetFocus;
+end;
+procedure TfrmCadastroCidades.btnProximo_dadoClick(Sender: TObject);
+begin
+  DataModule2.FDTable_cidades.Next;
+end;
+
+//buttons
+end.

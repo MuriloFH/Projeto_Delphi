@@ -1,7 +1,8 @@
 object DataModule2: TDataModule2
   OldCreateOrder = False
-  Height = 405
-  Width = 754
+  OnCreate = DataModuleCreate
+  Height = 199
+  Width = 729
   object FDConnection_SQLite_Banco: TFDConnection
     Params.Strings = (
       
@@ -98,6 +99,7 @@ object DataModule2: TDataModule2
       DisplayLabel = 'Data do cadastro'
       FieldName = 'data_cadastro'
       Origin = 'data_cadastro'
+      EditMask = '!99/99/00;1;_'
       Size = 10
     end
     object FDTable_numerosid_cliente: TIntegerField
@@ -109,18 +111,21 @@ object DataModule2: TDataModule2
       DisplayLabel = 'Numero do celular'
       FieldName = 'numero_celular'
       Origin = 'numero_celular'
+      EditMask = '!\(99\)00000-0000;1;_'
       Size = 11
     end
     object FDTable_numerosdia_pagamento: TStringField
       DisplayLabel = 'Dia do pagamento'
       FieldName = 'dia_pagamento'
       Origin = 'dia_pagamento'
+      EditMask = '!99/99/00;1;_'
       Size = 10
     end
     object FDTable_numerosvalor_mensal: TIntegerField
       DisplayLabel = 'Valor mensal'
       FieldName = 'valor_mensal'
       Origin = 'valor_mensal'
+      EditFormat = #39'R$ ###,##0.00'#39
     end
     object FDTable_numeroscredito: TFMTBCDField
       DisplayLabel = 'Cr'#233'dito'

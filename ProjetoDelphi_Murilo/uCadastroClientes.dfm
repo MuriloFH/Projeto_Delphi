@@ -1,9 +1,10 @@
 object frmCadastroCliente: TfrmCadastroCliente
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'Cadastro de clientes'
-  ClientHeight = 410
-  ClientWidth = 654
+  ClientHeight = 420
+  ClientWidth = 664
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +12,7 @@ object frmCadastroCliente: TfrmCadastroCliente
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -78,7 +80,8 @@ object frmCadastroCliente: TfrmCadastroCliente
     Top = 187
     Width = 636
     Height = 134
-    DataSource = DataSource1
+    DataSource = DataSource_Clientes
+    Enabled = False
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -132,7 +135,7 @@ object frmCadastroCliente: TfrmCadastroCliente
     Width = 27
     Height = 21
     DataField = 'id'
-    DataSource = DataSource1
+    DataSource = DataSource_Clientes
     TabOrder = 5
   end
   object DBEdit2: TDBEdit
@@ -141,7 +144,7 @@ object frmCadastroCliente: TfrmCadastroCliente
     Width = 300
     Height = 21
     DataField = 'nome'
-    DataSource = DataSource1
+    DataSource = DataSource_Clientes
     TabOrder = 6
   end
   object DBEdit3: TDBEdit
@@ -150,16 +153,8 @@ object frmCadastroCliente: TfrmCadastroCliente
     Width = 237
     Height = 21
     DataField = 'endereco'
-    DataSource = DataSource1
+    DataSource = DataSource_Clientes
     TabOrder = 7
-  end
-  object DBNavigator1: TDBNavigator
-    Left = 344
-    Top = 115
-    Width = 240
-    Height = 25
-    DataSource = DataSource1
-    TabOrder = 8
   end
   object DBLookupComboBox1: TDBLookupComboBox
     Left = 62
@@ -167,8 +162,8 @@ object frmCadastroCliente: TfrmCadastroCliente
     Width = 145
     Height = 21
     DataField = 'nome_cidade'
-    DataSource = DataSource1
-    TabOrder = 9
+    DataSource = DataSource_Clientes
+    TabOrder = 8
   end
   object edtQuantidadeCliente: TLabeledEdit
     Left = 8
@@ -178,7 +173,7 @@ object frmCadastroCliente: TfrmCadastroCliente
     EditLabel.Width = 105
     EditLabel.Height = 13
     EditLabel.Caption = 'Quantidade de cliente'
-    TabOrder = 10
+    TabOrder = 9
   end
   object btnNovo: TButton
     Left = 32
@@ -186,7 +181,7 @@ object frmCadastroCliente: TfrmCadastroCliente
     Width = 75
     Height = 25
     Caption = 'Novo'
-    TabOrder = 11
+    TabOrder = 10
     OnClick = btnNovoClick
   end
   object btnCancelar: TBitBtn
@@ -195,12 +190,12 @@ object frmCadastroCliente: TfrmCadastroCliente
     Width = 75
     Height = 25
     Caption = 'Cancelar'
-    TabOrder = 12
+    TabOrder = 11
     OnClick = btnCancelarClick
   end
-  object DataSource1: TDataSource
+  object DataSource_Clientes: TDataSource
     DataSet = DataModule2.FDTable_clientes
-    OnStateChange = DataSource1StateChange
+    OnStateChange = DataSource_ClientesStateChange
     Left = 520
     Top = 8
   end
