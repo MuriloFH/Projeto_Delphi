@@ -111,8 +111,6 @@ begin
 
   Result:=soma;
 
-  FDTable_numeros.EnableControls;
-
 end;
 
 

@@ -88,7 +88,7 @@ object DataModule2: TDataModule2
     Connection = FDConnection_SQLite_Banco
     TableName = 'numeros4'
     Left = 640
-    Top = 128
+    Top = 120
     object FDTable_numerosid: TIntegerField
       DisplayLabel = 'C'#243'digo'
       FieldName = 'id'
