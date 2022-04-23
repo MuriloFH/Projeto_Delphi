@@ -1,1 +1,1 @@
-# Projeto para matéria de programação ministrado pelo professor João Luiz Osteto.
+Projeto para matéria de programação ministrado pelo professor João Luiz Osteto.
