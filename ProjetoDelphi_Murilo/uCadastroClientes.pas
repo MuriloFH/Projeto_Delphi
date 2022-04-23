@@ -85,7 +85,6 @@ begin
 end;
 procedure TfrmCadastroCliente.btnProximo_dadoClick(Sender: TObject);
 begin
-  //não está funcionando o botão next
   DataSource_Clientes.DataSet.Next;
 end;
 
@@ -101,10 +100,10 @@ if DataSource_Clientes.State in [dsBrowse] then
 end;
 
 
-//executa a procedure quando o form é criado
+//executa a procedure quando o form Ã© criado
 procedure TfrmCadastroCliente.FormShow(Sender: TObject);
 begin
-QuantidadeCliente; //aqui está funcionando
+QuantidadeCliente;
 end;
 
 //mostra no edit a quantidade de cliente
